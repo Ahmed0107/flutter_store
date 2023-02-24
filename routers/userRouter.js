@@ -4,8 +4,10 @@ const userController = require("../controllers/userController");
 
 router.get("/get-all", userController.getUsers);
 
+router.post("/sign-in", userController.signIn);
+
 router.get("/find-user/:email", userController.findUserByEmail);
 
-router.post('/add-user', userController.addUser)
+router.post("/add-user", userController.addUser);
 
 module.exports = router;

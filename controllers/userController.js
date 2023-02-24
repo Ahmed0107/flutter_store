@@ -17,6 +17,18 @@ const findUserByEmail = async (req, res) => {
   }
 };
 
+const signIn = async (req, res) => {
+  const { email, password } = req.body;
+
+  const foundedUser = await User.findOne({ email: email, password: password });
+
+  if (foundedUser) {
+    res.send("exist");
+  } else {
+    res.send("not-exist");
+  }
+};
+
 const addUser = async (req, res) => {
   const { username, email, password } = req.body;
 
@@ -38,4 +50,9 @@ const addUser = async (req, res) => {
   }
 };
 
-module.exports = { getUsers, findUserByEmail, addUser };
+module.exports = {
+  getUsers,
+  findUserByEmail,
+  addUser,
+  signIn,
+};
