@@ -15,7 +15,7 @@ const getBestSellerProds = (req, res) => {
       title: "Wireless Remote",
       category: "Tesla Inc",
       price: 799,
-      image: `${req.protocol}://${req.headers.host}/uploads/remote.png`,
+      image: `${req.protocol}://${req.headers.host}/uploads/ressmote.png`,
       details:
         "Wireless Remote designed to help you keep dry so you can more comfortably work harder, longer.",
     },
@@ -55,7 +55,7 @@ const getBestSellerProds = (req, res) => {
       title: "Wireless Remote",
       category: "Tesla Inc",
       price: 799,
-      image: `${req.protocol}://${req.headers.host}/uploads/remote.png`,
+      image: `${req.protocol}://${req.headers.host}/uploads/ressmote.png`,
       details:
         "Wireless Remote designed to help you keep dry so you can more comfortably work harder, longer.",
     },
