@@ -1,22 +1,5 @@
 const User = require("../models/userModel");
 
-const getUsers = async (req, res) => {
-  const users = await User.find();
-  res.send(users);
-};
-
-const findUserByEmail = async (req, res) => {
-  const { email } = req.params;
-
-  const foundedUser = await User.findOne({ email: email });
-
-  if (foundedUser) {
-    res.send("email exist");
-  } else {
-    res.send("not exist");
-  }
-};
-
 const signIn = async (req, res) => {
   const { email, password } = req.body;
 
@@ -51,8 +34,6 @@ const addUser = async (req, res) => {
 };
 
 module.exports = {
-  getUsers,
-  findUserByEmail,
   addUser,
   signIn,
 };
